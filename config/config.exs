@@ -36,9 +36,9 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
-config :ship_core, ShipCore.Guardian,
+config :ship_core, ShipCore.Auth.Guardian,
     issuer: "ship_core",
-    secret_key:
+    secret_key: "YXBt6UkTXLidigWMAmb8BrJ3XcXRxrrK063gcRUyHHdTsG9xA8tlEa7XAwFtV9ld"
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason

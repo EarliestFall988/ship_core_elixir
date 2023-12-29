@@ -4,7 +4,7 @@ import Config
 config :ship_core, ShipCore.Repo,
   username: "postgres",
   password: "ac2ac356-1fb4-4304-80cf-a111bc1d2a45",
-  hostname: "localhost",
+  hostname: "172.17.0.3",
   database: "ship_core_dev",
   stacktrace: true,
   port: "5432",
