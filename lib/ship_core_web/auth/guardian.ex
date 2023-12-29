@@ -38,8 +38,9 @@ defmodule ShipCoreWeb.Auth.Guardian do
     end
   end
 
-  defp validate_password(%{hash_password: hash_password}, password),
-    do: Bcrypt.verify_pwd(password, hash_password)
+  defp validate_password(%{hash_password: hash_password}, password) do
+      Bcrypt.verify_pass(password, hash_password)
+  end
 
   defp create_token(account) do
     {:ok, token, _claims} = encode_and_sign(account)

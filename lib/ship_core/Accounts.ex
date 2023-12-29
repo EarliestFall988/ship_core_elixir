@@ -19,6 +19,8 @@ defmodule ShipCore.Accounts do
     Repo.all(Account)
   end
 
+  def get_user(id), do: Repo.get!(User, id)
+
   @doc """
 
   Returns the account with the given `id`.
